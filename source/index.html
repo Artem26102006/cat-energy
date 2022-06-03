@@ -4,11 +4,275 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>HTML Academy: Седона</title>
+  <title>HTML Academy: Cat Energy</title>
+  <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
-<body class="page__body body">
+<body class="page-body">
+  <header class="main-header">
+    <a href="#" class="main-header__link-mobile">
+      <svg width="33" height="38">
+        <use href="img/sprite.svg#logo-avatar-mobile"></use>
+      </svg>
+      <svg width="101" height="18">
+        <use href="img/sprite.svg#logo-text-mobile"></use>
+      </svg>
+    </a>
+    <a href="#" class="main-header__link-tabdesk" style="display: none">
+      <!--style="display: none" - это я добавлю потом в стилях -->
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+        <img src="img/icons/logo-tablet.svg" alt="">
+      </picture>
+    </a>
+    <nav class="navigation">
+      <button class="navigation__button"></button>
+      <ul class="list-menu">
+        <li class="list-menu__item">
+          <a href="index.html" class="list-menu__link">главная</a>
+        </li>
+        <li class="list-menu__item">
+          <a href="catalog.html" class="list-menu__link">каталог продукции</a>
+        </li>
+        <li class="list-menu__item">
+          <a href="form.html" class="list-menu__link">подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <section class="food-cats">
+      <div class="food-choose">
+        <h1 class="food-choose__title">
+          Функциональное
+          питание для котов
+        </h1>
+        <p class="food-choose__paragraph">
+          Занялся собой? Займись котом!
+        </p>
+        <div class="food-choose__picture">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/food-desktop.webp 1x, img/food-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/food-tablet.webp 1x, img/food-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/food-mobile.webp 1x, img/food-mobile@2x.webp 2x" alt="">
+
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+            <img src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" alt="">
+          </picture>
+        </div>
+        <a href="#" class="button food-choose__button">
+          подобрать программу
+        </a>
+      </div>
+
+      <div class="food-weight-loss">
+        <h3 class="food-weight-loss__title">
+          похудение
+        </h3>
+        <p class="food-weight-loss__paragraph">
+          Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
+          поможет вашему питомцу сбросить лишний вес.
+        </p>
+        <a href="#" class="food-weight-loss__link">
+          каталог slim
+        </a>
+      </div>
+
+      <div class="food-mass-gain">
+        <h3 class="food-mass-gain__title">
+          Набор массы
+        </h3>
+        <p class="food-mass-gain__paragraph">
+          Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
+          необходимые мышцы!
+        </p>
+        <a href="#" class="food-mass-gain__link">
+          каталог pro
+        </a>
+      </div>
+    </section>
+
+    <section class="how-working">
+      <h2 class="how-working__title">
+        Как это работает
+      </h2>
+
+      <ul class="list-how-working">
+        <li class="list-how-working__item">
+          <div class="list-how-working__leaf"></div>
+          <p class="list-how-working__paragraph">
+            Функциональное питание
+            содержит только полезные
+            питательные вещества.
+          </p>
+        </li>
+        <li class="list-how-working__item">
+          <div class="list-how-working__tub"></div>
+          <p class="list-how-working__paragraph">
+            Выпускается в виде порошка,
+            который нужно лишь залить
+            кипятком и готово.
+          </p>
+        </li>
+        <li class="list-how-working__item">
+          <div class="list-how-working__eat"></div>
+          <p class="list-how-working__paragraph">
+            Замените один-два приема
+            обычной еды на наше
+            функциональное питание.
+          </p>
+        </li>
+        <li class="list-how-working__item">
+          <div class="list-how-working__time"></div>
+          <p class="list-how-working__paragraph">
+            Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="example">
+      <h2 class="example__title">
+        Живой пример
+      </h2>
+      <p class="example__paragraph">
+        Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
+        изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+      </p>
+      <div class="example-total">
+        <dl class="example-info">
+          <div class="example-info__weight">
+            <dt class="example-info__kol">5 КГ</dt>
+            <dd class="example-info__descrip">снижение веса</dd>
+          </div>
+          <div class="example-info__days">
+            <dt class="example-info__kol">60 дней</dt>
+            <dd class="example-info__descrip">затрачено времени</dd>
+          </div>
+        </dl>
+        <span class="example-total__title-expenses">
+          Затраты на питание: 15 000 РУБ.
+        </span>
+      </div>
+
+      <div class="slider-example">
+        <div class="slider-example__picture-mobile">
+          <div class="slider-example__picture-mobile-before">
+            <picture>
+              <source media="(min-width: 320px)" type="image/webp" srcset="img/before-cat-mobile.webp 1x, img/before-cat-mobile@2x.webp 2x" alt="">
+              <img src="img/before-cat-mobile.png" srcset="img/before-cat-mobile@2x.png 2x" alt="">
+            </picture>
+          </div>
+          <div class="slider-example__picture-mobile-after">
+            <picture>
+              <source media="(min-width: 320px)" type="image/webp" srcset="img/after-cat-mobile.webp 1x, img/after-cat-mobile@2x.webp 2x" alt="">
+              <img src="img/after-cat-mobile.png" srcset="img/after-cat-mobile@2x.png 2x" alt="">
+            </picture>
+          </div>
+        </div>
+
+        <div class="slider-example__picture" style="display: none;"> <!--style="display: none" - это я добавлю потом в стилях -->
+          <div class="slider-example__picture-before">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp" srcset="img/before-cat.webp 1x, img/before-cat@2x.webp 2x" alt="">
+              <source media="(min-width: 1440px)" srcset="img/before-cat.png 1x, img/before-cat@2x.png 2x" alt="">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/before-cat.webp 1x, img/before-cat@2x.webp 2x" alt="">
+              <img src="img/before-cat.png" srcset="img/before-cat@2x.png 2x" alt="">
+            </picture>
+          </div>
+          <div class="slider-example__picture-after">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp" srcset="img/after-cat.webp 1x, img/after-cat@2x.webp 2x" alt="">
+              <source media="(min-width: 1440px)" srcset="img/after-cat.png 1x, img/after-cat@2x.png 2x" alt="">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/after-cat.webp 1x, img/after-cat@2x.webp 2x" alt="">
+              <img src="img/after-cat.png" srcset="img/after-cat@2x.png 2x" alt="">
+            </picture>
+          </div>
+        </div>
+
+        <div class="slider-example__before-after">
+          <button class="slider-example__before-button">было</button>
+          <div class="slider-example__line"></div>
+          <button class="slider-examplec__after-button">стало</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-cat-energy">
+      <div class="invite-address">
+        <h4 class="invite-address__title">
+          приглашаем к сотрудничеству дилеров!
+        </h4>
+        <address class="invite-address__address">
+          ул. Большая
+          Конюшенная, д. 19/8
+          Санкт-Петербург
+        </address>
+      </div>
+      <div class="map-cat-energy__map">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" alt="">
+
+          <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+          <img src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" alt="">
+        </picture>
+      </div>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4114.359294113767!2d30.322711145748926!3d59.93851799897699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631f6df7d3481%3A0xc0016be317f9a6fd!2sCat%20Energy!5e0!3m2!1sru!2sru!4v1654255337140!5m2!1sru!2sru"
+        width="320" height="362" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        style="display: none;"></iframe>
+      <!--style="display: none" - это я добавлю потом в стилях -->
+    </section>
+  </main>
+  <footer class="main-footer">
+    <a href="#" class="main-footer__link">
+      <svg width="128" height="24">
+        <use href="img/sprite.svg#footer-logo-text"></use>
+      </svg>
+    </a>
+    <ul class="list-social">
+      <li class="list-social__item">
+        <a href="#" class="list-social__link">
+          <svg width="27" height="17">
+            <use href="img/sprite.svg#vk"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="list-social__item">
+        <a href="#" class="list-social__link">
+          <svg width="24" height="19">
+            <use href="img/sprite.svg#youtube"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="list-social__item">
+        <a href="#" class="list-social__link">
+          <svg width="20" height="17">
+            <use href="img/sprite.svg#telegram"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <a href="https://htmlacademy.ru/intensive/adaptive" class="main-footer__link-academy">
+      <span>HTML academy</span>
+      <svg width="27" height="34">
+        <use href="img/sprite.svg#icon-html-academy"></use>
+      </svg>
+    </a>
+  </footer>
 </body>
 
 </html>
