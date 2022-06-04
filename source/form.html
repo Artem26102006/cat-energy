@@ -6,13 +6,206 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>HTML Academy: Седона</title>
-  <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
-<body class="page__body body">
+<body class="page-body">
+  <header class="main-header">
+    <a href="#" class="main-header__link-mobile">
+      <svg width="33" height="38">
+        <use href="img/sprite.svg#logo-avatar-mobile"></use>
+      </svg>
+      <svg width="101" height="18">
+        <use href="img/sprite.svg#logo-text-mobile"></use>
+      </svg>
+    </a>
+    <a href="#" class="main-header__link-tabdesk" style="display: none"> <!--style="display: none" - это я добавлю потом в стилях -->
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg" />
+        <img src="img/icons/logo-tablet.svg" alt="" />
+      </picture>
+    </a>
+
+    <nav class="navigation">
+      <button class="navigation__button"></button>
+      <ul class="list-menu">
+        <li class="list-menu__item">
+          <a href="index.html" class="list-menu__link">главная</a>
+        </li>
+        <li class="list-menu__item">
+          <a href="catalog.html" class="list-menu__link">каталог продукции</a>
+        </li>
+        <li class="list-menu__item">
+          <a href="form.html" class="list-menu__link">подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <section class="program-selection">
+      <h1 class="program-selection__title">Подбор программы</h1>
+
+      <p class="program-selection__paragraph">
+        Заполните анкету, и мы подберем программу питания для вашего кота
+      </p>
+
+      <form class="form-cat-energy" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="about-cat">
+          <label class="about-cat__field">
+            <span class="about-cat__field-label">Имя:*</span>
+            <input class="about-cat__field-control" type="text" name="name" required="" />
+          </label>
+          <label class="about-cat__field">
+            <span class="about-cat__field-label">Вес(кг):*</span>
+            <input class="about-cat__field-control" type="text" name="weight" required="" />
+          </label>
+          <label class="about-cat__field">
+            <span class="about-cat__field-label">Возраст(лет):</span>
+            <input class="about-cat__field-control" type="text" name="age" />
+          </label>
+        </div>
+
+        <div class="choose-way">
+          <label class="choose-way__field choose-way__control">
+            <input class="choose-way__field-control" type="radio" name="button" value="weight-loss" />
+            <span class="choose-way__control-mark"></span>
+            <span class="choose-way__field-label">Похудение</span>
+          </label>
+          <label class="choose-way__field choose-way__control">
+            <input class="choose-way__field-control" type="radio" name="button" value="weight-gain" />
+            <span class="choose-way__control-mark"></span>
+            <span class="choose-way__field-label">Набор массы</span>
+          </label>
+          <label class="choose-way__field choose-way__control">
+            <input class="choose-way__field-control" type="radio" name="button" value="dont-know" />
+            <span class="choose-way__control-mark"></span>
+            <span class="choose-way__field-label">Не знаю (Нужен ваш совет)</span>
+          </label>
+        </div>
+        <div class="about-owner">
+          <h2 class="about-owner__title">
+            Контактные данные (владельца кота)
+          </h2>
+          <label class="about-owner__field">
+            <span class="about-owner__field-label">E-mail:*</span>
+            <input class="about-owner__field-control" type="email" name="email" required="" />
+          </label>
+          <label class="about-owner__field">
+            <span class="about-owner__field-label">Телефон:*</span>
+            <input class="about-owner__field-control" type="tel" name="weight" required="" />
+          </label>
+        </div>
+        <div class="comment">
+          <h2 class="comment__title">Комментарий</h2>
+          <textarea name="comment__place" id="comment" cols="45" rows="10">
+            </textarea>
+        </div>
+        <div class="additional">
+          <h2 class="additional__title">
+            Контактные данные (владельца кота)
+          </h2>
+          <label class="additional__field additional__control">
+            <input class="additional__field-control" type="checkbox" name="sugar" value="button" />
+            <span class="additional__control-mark"></span>
+            <span class="additional__field-label">сахарозаменитель</span>
+          </label>
+          <label class="additional__field additional__control">
+            <input class="additional__field-control" type="checkbox" name="water" value="button" />
+            <span class="additional__control-mark"></span>
+            <span class="additional__field-label">питьевая вода</span>
+          </label>
+          <label class="additional__field additional__control">
+            <input class="additional__field-control" type="checkbox" name="milk" value="button" />
+            <span class="additional__control-mark"></span>
+            <span class="additional__field-label">молоко</span>
+          </label>
+          <label class="additional__field additional__control">
+            <input class="additional__field-control" type="checkbox" name="vitamins" value="button" />
+            <span class="additional__control-mark"></span>
+            <span class="additional__field-label">витамины</span>
+          </label>
+        </div>
+
+        <div class="form-cat-energy__block-button">
+          <button type="submit" class="button form-cat-energy__button">
+            отправить заявку
+          </button>
+          <span class="form-cat-energy__required">
+            * — Обязательные поля
+          </span>
+        </div>
+      </form>
+    </section>
+    <section class="map-cat-energy">
+      <div class="invite-address">
+        <h4 class="invite-address__title">
+          приглашаем к сотрудничеству дилеров!
+        </h4>
+        <address class="invite-address__address">
+          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+        </address>
+      </div>
+      <div class="map-cat-energy__map">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" />
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" />
+          <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" alt="" />
+
+          <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x" />
+          <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x" />
+          <img src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" alt="" />
+        </picture>
+      </div>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4114.359294113767!2d30.322711145748926!3d59.93851799897699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631f6df7d3481%3A0xc0016be317f9a6fd!2sCat%20Energy!5e0!3m2!1sru!2sru!4v1654255337140!5m2!1sru!2sru"
+        width="320" height="362" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        style="display: none;"></iframe>
+      <!--style="display: none" - это я добавлю потом в стилях -->
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <a href="#" class="main-footer__link">
+      <svg width="128" height="24">
+        <use href="img/sprite.svg#footer-logo-text"></use>
+      </svg>
+    </a>
+    <ul class="list-social">
+      <li class="list-social__item">
+        <a href="#" class="list-social__link">
+          <svg width="27" height="17">
+            <use href="img/sprite.svg#vk"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="list-social__item">
+        <a href="#" class="list-social__link">
+          <svg width="24" height="19">
+            <use href="img/sprite.svg#youtube"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="list-social__item">
+        <a href="#" class="list-social__link">
+          <svg width="20" height="17">
+            <use href="img/sprite.svg#telegram"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <a href="https://htmlacademy.ru/intensive/adaptive" class="main-footer__link-academy">
+      <span>HTML academy</span>
+      <svg width="27" height="34">
+        <use href="img/sprite.svg#icon-html-academy"></use>
+      </svg>
+    </a>
+  </footer>
 </body>
 
 </html>
