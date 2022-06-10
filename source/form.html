@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>HTML Academy: Седона</title>
+  <title>HTML Academy: Cat Energy</title>
   <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font">
   <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css" />
@@ -14,22 +14,18 @@
 <body class="page-body">
   <header class="main-header">
     <a href="#" class="main-header__link-mobile">
-      <svg width="33" height="38">
-        <use href="img/sprite.svg#logo-avatar-mobile"></use>
-      </svg>
-      <svg width="101" height="18">
-        <use href="img/sprite.svg#logo-text-mobile"></use>
-      </svg>
-    </a>
-    <a href="#" class="main-header__link-tabdesk" style="display: none"> <!--style="display: none" - это я добавлю потом в стилях -->
       <picture>
-        <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg" />
-        <img src="img/icons/logo-tablet.svg" alt="" />
+        <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+        <img class="main-header__logo-image" src="img/icons/logo-avatar-mobile.svg" width="34" height="38" alt="Cat Energy">
       </picture>
+      <img class="main-header__logo-text" src="img/icons/logo-text-mobile.svg" width="101" height="18" alt="Cat Energy">
     </a>
 
     <nav class="navigation">
-      <button class="navigation__button"></button>
+      <button class="navigation__button" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
       <ul class="list-menu">
         <li class="list-menu__item">
           <a href="index.html" class="list-menu__link">главная</a>
@@ -99,13 +95,12 @@
           </label>
         </div>
         <div class="comment">
-          <h2 class="comment__title">Комментарий</h2>
-          <textarea name="comment__place" id="comment" cols="45" rows="10">
-            </textarea>
+          <label class="comment__title" for="comment">Комментарий</label>
+          <textarea id="comment" name="comment__place" id="comment" cols="" rows=""></textarea>
         </div>
         <div class="additional">
           <h2 class="additional__title">
-            Контактные данные (владельца кота)
+            Дополнительно
           </h2>
           <label class="additional__field additional__control">
             <input class="additional__field-control" type="checkbox" name="sugar" value="button" />
@@ -140,32 +135,36 @@
       </form>
     </section>
     <section class="map-cat-energy">
-      <div class="invite-address">
-        <h4 class="invite-address__title">
+      <div class="map-cat-energy__invite-address">
+        <h4 class="map-cat-energy__title-invite">
           приглашаем к сотрудничеству дилеров!
         </h4>
-        <address class="invite-address__address">
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+        <address class="map-cat-energy__address">
+          ул. Большая
+          Конюшенная, д. 19/8
+          Санкт-Петербург
         </address>
       </div>
-      <div class="map-cat-energy__map">
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)"
-            srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" />
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" />
-          <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" alt="" />
+      <div class="map-cat-energy__map-block">
+        <div class="map-cat-energy__map">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" alt="">
 
-          <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x" />
-          <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x" />
-          <img src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" alt="" />
-        </picture>
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+            <img src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" alt="">
+          </picture>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4114.359294113767!2d30.322711145748926!3d59.93851799897699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631f6df7d3481%3A0xc0016be317f9a6fd!2sCat%20Energy!5e0!3m2!1sru!2sru!4v1654255337140!5m2!1sru!2sru"
+          width="320" height="362" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          style="display: none;"></iframe>
       </div>
-
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4114.359294113767!2d30.322711145748926!3d59.93851799897699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631f6df7d3481%3A0xc0016be317f9a6fd!2sCat%20Energy!5e0!3m2!1sru!2sru!4v1654255337140!5m2!1sru!2sru"
-        width="320" height="362" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        style="display: none;"></iframe>
       <!--style="display: none" - это я добавлю потом в стилях -->
     </section>
   </main>

@@ -12,32 +12,28 @@
 
 <body class="page-body">
   <header class="main-header">
-    <a href="#" class="main-header__link-mobile">
-      <svg width="33" height="38">
-        <use href="img/sprite.svg#logo-avatar-mobile"></use>
-      </svg>
-      <svg width="101" height="18">
-        <use href="img/sprite.svg#logo-text-mobile"></use>
-      </svg>
-    </a>
-    <a href="#" class="main-header__link-tabdesk" style="display: none"> <!--style="display: none" - это я добавлю потом в стилях -->
+    <a href="#" class="main-header__link">
       <picture>
         <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg">
-        <img src="img/icons/logo-tablet.svg" alt="">
+        <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+        <img class="main-header__logo-image" src="img/icons/logo-avatar-mobile.svg" width="34" height="38"
+          alt="Cat Energy">
       </picture>
+      <img class="main-header__logo-text" src="img/icons/logo-text-mobile.svg" width="101" height="18" alt="Cat Energy">
     </a>
-
     <nav class="navigation">
-      <button class="navigation__button"></button>
-      <ul class="list-menu">
-        <li class="list-menu__item">
-          <a href="index.html" class="list-menu__link">главная</a>
+      <button class="button navigation__button" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="navigation__list-menu">
+        <li class="navigation__item">
+          <a href="index.html" class="link navigation__link navigation__link--black">Главная</a>
         </li>
-        <li class="list-menu__item">
-          <a href="catalog.html" class="list-menu__link">каталог продукции</a>
+        <li class="navigation__item">
+          <a href="catalog.html" class="link navigation__link navigation__link--black">Каталог продукции</a>
         </li>
-        <li class="list-menu__item">
-          <a href="form.html" class="list-menu__link">подбор программы</a>
+        <li class="navigation__item">
+          <a href="form.html" class="link navigation__link navigation__link--black">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -45,424 +41,504 @@
 
   <main class="main-container">
     <section class="catalog">
-      <h1 class="catalog__title">
-        Каталог продукции
-      </h1>
-      <ul class="list-products">
+      <div class="container">
+        <h1 class="catalog__title-main">
+          Каталог продукции
+        </h1>
+        <ul class="catalog__list-products">
 
-        <li class="list-products__item">
-          <a href="#" class="list-products__link-image">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/photo-1-small-desktop.webp 1x, img/photo-1-small-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-small-tablet.webp 1x, img/photo-1-small-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-1-small-mobile.webp 1x, img/photo-1-small-mobile@2x.webp 2x" alt="">
+          <li class="catalog__item">
+            <div class="catalog__wrapper-descrip">
+              <a href="#" class="catalog__link-image">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/jar-chicken-500-desktop.webp 1x, img/jar-chicken-500-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/jar-chicken-500-tablet.webp 1x, img/jar-chicken-500-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/jar-chicken-500-mobile.webp 1x, img/jar-chicken-500-mobile@2x.webp 2x" alt="">
 
-              <source media="(min-width: 1440px)" srcset="img/photo-1-small-desktop.jpg 1x, img/photo-1-small-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-1-small-tablet.jpg 1x, img/photo-1-small-tablet@2x.jpg 2x">
-              <img src="img/photo-1-small-mobile.jpg" srcset="img/photo-1-small-mobile@2x.jpg 2x" alt="">
-            </picture>
-          </a>
-          <a href="#" class="list-products__link-title">
-            <h3 class="list-products__title">
-              Cat Energy
-              PRO
-              500 г
-            </h3>
-          </a>
-          <dl class="list-products-info">
-            <div class="list-products-info__weight">
-              <dt class="list-products-info__title">Масса</dt>
-              <dd class="list-products-info__value">500 г</dd>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/jar-chicken-500-desktop.png 1x, img/jar-chicken-500-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/jar-chicken-500-tablet.png 1x, img/jar-chicken-500-tablet@2x.png 2x">
+                  <img src="img/jar-chicken-500-mobile.png" srcset="img/jar-chicken-500-mobile@2x.png 2x" alt="">
+                </picture>
+              </a>
+              <div class="catalog__block-descrip">
+                <a href="#" class="link catalog__link-title">
+                  <h3 class="catalog__title">
+                    Cat Energy
+                    PRO
+                    500 г
+                  </h3>
+                </a>
+                <dl class="catalog__info-about-products">
+                  <div class="catalog__descrip-product catalog__descrip-product--line">
+                    <dt class="catalog__title">Масса</dt>
+                    <dd class="catalog__value">500 г</dd>
+                  </div>
+                  <div class="catalog__descrip-product">
+                    <dt class="catalog__title">Вкус</dt>
+                    <dd class="catalog__value">Курица</dd>
+                  </div>
+                  <div class="catalog__descrip-product">
+                    <dt class="catalog__title">Цена</dt>
+                    <dd class="catalog__value">700 Р.</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
-            <div class="list-products-info__taste">
-              <dt class="list-products-info__title">Вкус</dt>
-              <dd class="list-products-info__value">Курица</dd>
-            </div>
-            <div class="list-products-info__price">
-              <dt class="list-products-info__title">Цена</dt>
-              <dd class="list-products-info__value">700 Р.</dd>
-            </div>
-          </dl>
-          <button type="button" class="button list-products__button">
-            заказать
-          </button>
-        </li>
+            <button type="button" class="button catalog__button">
+              заказать
+            </button>
+          </li>
 
-        <li class="list-products__item">
-          <a href="#" class="list-products__link-image">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/photo-1-big-desktop.webp 1x, img/photo-1-big-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-big-tablet.webp 1x, img/photo-1-big-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-1-big-mobile.webp 1x, img/photo-1-big-mobile@2x.webp 2x" alt="">
+          <li class="catalog__item">
+            <div class="catalog__wrapper-descrip">
+              <a href="#" class="catalog__link-image">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/jar-chicken-1000-desktop.webp 1x, img/jar-chicken-1000-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/jar-chicken-1000-tablet.webp 1x, img/jar-chicken-1000-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/jar-chicken-1000-mobile.webp 1x, img/jar-chicken-1000-mobile@2x.webp 2x" alt="">
 
-              <source media="(min-width: 1440px)" srcset="img/photo-1-big-desktop.jpg 1x, img/photo-1-big-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-1-big-tablet.jpg 1x, img/photo-1-big-tablet@2x.jpg 2x">
-              <img src="img/photo-1-big-mobile.jpg" srcset="img/photo-1-big-mobile@2x.jpg 2x" alt="">
-            </picture>
-          </a>
-          <a href="#" class="list-products__link-title">
-            <h3 class="list-products__title">
-              Cat Energy
-              PRO
-              1000 г
-            </h3>
-          </a>
-          <dl class="list-products-info">
-            <div class="list-products-info__weight">
-              <dt class="list-products-info__title">Масса</dt>
-              <dd class="list-products-info__value">1000 г</dd>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/jar-chicken-1000-desktop.png 1x, img/jar-chicken-1000-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/jar-chicken-1000-tablet.png 1x, img/jar-chicken-1000-tablet@2x.png 2x">
+                  <img src="img/jar-chicken-1000-mobile.png" srcset="img/jar-chicken-1000-mobile@2x.png 2x" alt="">
+                </picture>
+              </a>
+              <div class="catalog__block-descrip">
+                <a href="#" class="catalog__link-title">
+                  <h3 class="catalog__title">
+                    Cat Energy
+                    PRO
+                    1000 г
+                  </h3>
+                </a>
+                <dl class="catalog__info-about-products">
+                  <div class="catalog__descrip-product catalog__descrip-product--line">
+                    <dt class="catalog__title">Масса</dt>
+                    <dd class="catalog__value">1000 г</dd>
+                  </div>
+                  <div class="catalog__descrip-product">
+                    <dt class="catalog__title">Вкус</dt>
+                    <dd class="catalog__value">Курица</dd>
+                  </div>
+                  <div class="catalog__descrip-product">
+                    <dt class="catalog__title">Цена</dt>
+                    <dd class="catalog__value">1000 Р.</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
-            <div class="list-products-info__taste">
-              <dt class="list-products-info__title">Вкус</dt>
-              <dd class="list-products-info__value">Курица</dd>
-            </div>
-            <div class="list-products-info__price">
-              <dt class="list-products-info__title">Цена</dt>
-              <dd class="list-products-info__value">1000 Р.</dd>
-            </div>
-          </dl>
-          <button type="button" class="button list-products__button">
-            заказать
-          </button>
-        </li>
+            <button type="button" class="button catalog__button">
+              заказать
+            </button>
+          </li>
 
-        <li class="list-products__item">
-          <a href="#" class="list-products__link-image">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/photo-2-small-desktop.webp 1x, img/photo-2-small-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-2-small-tablet.webp 1x, img/photo-2-small-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-2-small-mobile.webp 1x, img/photo-2-small-mobile@2x.webp 2x" alt="">
+          <li class="catalog__item">
+            <div class="catalog__wrapper-descrip">
+              <a href="#" class="catalog__link-image">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/jar-fish-500-desktop.webp 1x, img/jar-fish-500-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/jar-fish-500-tablet.webp 1x, img/jar-fish-500-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/jar-fish-500-mobile.webp 1x, img/jar-fish-500-mobile@2x.webp 2x"
+                    alt="">
 
-              <source media="(min-width: 1440px)" srcset="img/photo-2-small-desktop.jpg 1x, img/photo-2-small-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-2-small-tablet.jpg 1x, img/photo-2-small-tablet@2x.jpg 2x">
-              <img src="img/photo-2-small-mobile.jpg" srcset="img/photo-2-small-mobile@2x.jpg 2x" alt="">
-            </picture>
-          </a>
-          <a href="#" class="list-products__link-title">
-            <h3 class="list-products__title">
-              Cat Energy
-              PRO
-              500 г
-            </h3>
-          </a>
-          <dl class="list-products-info">
-            <div class="list-products-info__weight">
-              <dt class="list-products-info__title">Масса</dt>
-              <dd class="list-products-info__value">500 г</dd>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/jar-fish-500-desktop.png 1x, img/jar-fish-500-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/jar-fish-500-tablet.png 1x, img/jar-fish-500-tablet@2x.png 2x">
+                  <img src="img/jar-fish-500-mobile.png" srcset="img/jar-fish-500-mobile@2x.png 2x" alt="">
+                </picture>
+              </a>
+              <div class="catalog__block-descrip">
+                <a href="#" class="catalog__link-title">
+                  <h3 class="catalog__title">
+                    Cat Energy
+                    PRO
+                    500 г
+                  </h3>
+                </a>
+                <dl class="catalog__info-about-products">
+                  <div class="catalog__descrip-product catalog__descrip-product--line">
+                    <dt class="catalog__title">Масса</dt>
+                    <dd class="catalog__value">500 г</dd>
+                  </div>
+                  <div class="catalog__descrip-product">
+                    <dt class="catalog__title">Вкус</dt>
+                    <dd class="catalog__value">Рыба</dd>
+                  </div>
+                  <div class="catalog__descrip-product">
+                    <dt class="catalog__title">Цена</dt>
+                    <dd class="catalog__value">700 Р.</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
-            <div class="list-products-info__taste">
-              <dt class="list-products-info__title">Вкус</dt>
-              <dd class="list-products-info__value">Рыба</dd>
-            </div>
-            <div class="list-products-info__price">
-              <dt class="list-products-info__title">Цена</dt>
-              <dd class="list-products-info__value">700 Р.</dd>
-            </div>
-          </dl>
-          <button type="button" class="button list-products__button">
-            заказать
-          </button>
-        </li>
+            <button type="button" class="button catalog__button">
+              заказать
+            </button>
+          </li>
 
-        <li class="list-products__item">
-          <a href="#" class="list-products__link-image">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/photo-2-big-desktop.webp 1x, img/photo-2-big-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-2-big-tablet.webp 1x, img/photo-2-big-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-2-big-mobile.webp 1x, img/photo-2-big-mobile@2x.webp 2x" alt="">
+          <li class="catalog__item">
+            <div class="catalog__wrapper-descrip">
+              <a href="#" class="catalog__link-image">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/jar-fish-1000-desktop.webp 1x, img/jar-fish-1000-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/jar-fish-1000-tablet.webp 1x, img/jar-fish-1000-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/jar-fish-1000-mobile.webp 1x, img/jar-fish-1000-mobile@2x.webp 2x" alt="">
 
-              <source media="(min-width: 1440px)" srcset="img/photo-2-big-desktop.jpg 1x, img/photo-2-big-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-2-big-tablet.jpg 1x, img/photo-2-big-tablet@2x.jpg 2x">
-              <img src="img/photo-2-big-mobile.jpg" srcset="img/photo-2-big-mobile@2x.jpg 2x" alt="">
-            </picture>
-          </a>
-          <a href="#" class="list-products__link-title">
-            <h3 class="list-products__title">
-              Cat Energy
-              PRO
-              1000 г
-            </h3>
-          </a>
-          <dl class="list-products-info">
-            <div class="list-products-info__weight">
-              <dt class="list-products-info__title">Масса</dt>
-              <dd class="list-products-info__value">1000 г</dd>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/jar-fish-1000-desktop.png 1x, img/jar-fish-1000-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/jar-fish-1000-tablet.png 1x, img/jar-fish-1000-tablet@2x.png 2x">
+                  <img src="img/jar-fish-1000-mobile.png" srcset="img/jar-fish-1000-mobile@2x.png 2x" alt="">
+                </picture>
+              </a>
+              <div class="catalog__block-descrip">
+                <a href="#" class="catalog__link-title">
+                  <h3 class="catalog__title">
+                    Cat Energy
+                    PRO
+                    1000 г
+                  </h3>
+                </a>
+                <dl class="catalog__info-about-products">
+                  <div class="catalog__descrip-product catalog__descrip-product--line">
+                    <dt class="catalog__title">Масса</dt>
+                    <dd class="catalog__value">1000 г</dd>
+                  </div>
+                  <div class="catalog__descrip-product">
+                    <dt class="catalog__title">Вкус</dt>
+                    <dd class="catalog__value">Рыба</dd>
+                  </div>
+                  <div class="catalog__descrip-product">
+                    <dt class="catalog__title">Цена</dt>
+                    <dd class="catalog__value">1000 Р.</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
-            <div class="list-products-info__taste">
-              <dt class="list-products-info__title">Вкус</dt>
-              <dd class="list-products-info__value">Рыба</dd>
-            </div>
-            <div class="list-products-info__price">
-              <dt class="list-products-info__title">Цена</dt>
-              <dd class="list-products-info__value">1000 Р.</dd>
-            </div>
-          </dl>
-          <button type="button" class="button list-products__button">
-            заказать
-          </button>
-        </li>
+            <button type="button" class="button catalog__button">
+              заказать
+            </button>
+          </li>
 
-        <li class="list-products__item">
-          <a href="#" class="list-products__link-image">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/photo-3-small-desktop.webp 1x, img/photo-3-small-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-3-small-tablet.webp 1x, img/photo-3-small-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-3-small-mobile.webp 1x, img/photo-3-small-mobile@2x.webp 2x" alt="">
+          <li class="catalog__item">
+            <div class="catalog__wrapper-descrip">
+              <a href="#" class="catalog__link-image">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/jar-buckwheat-500-desktop.webp 1x, img/jar-buckwheat-500-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/jar-buckwheat-500-tablet.webp 1x, img/jar-buckwheat-500-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/jar-buckwheat-500-mobile.webp 1x, img/jar-buckwheat-500-mobile@2x.webp 2x" alt="">
 
-              <source media="(min-width: 1440px)" srcset="img/photo-3-small-desktop.jpg 1x, img/photo-3-small-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-3-small-tablet.jpg 1x, img/photo-3-small-tablet@2x.jpg 2x">
-              <img src="img/photo-3-small-mobile.jpg" srcset="img/photo-3-small-mobile@2x.jpg 2x" alt="">
-            </picture>
-          </a>
-          <a href="#" class="list-products__link-title">
-            <h3 class="list-products__title">
-              Cat Energy
-              Slim
-              500 г
-            </h3>
-          </a>
-          <dl class="list-products-info">
-            <div class="list-products-info__weight">
-              <dt class="list-products-info__title">Масса</dt>
-              <dd class="list-products-info__value">500 г</dd>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/jar-buckwheat-500-desktop.png 1x, img/jar-buckwheat-500-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/jar-buckwheat-500-tablet.png 1x, img/jar-buckwheat-500-tablet@2x.png 2x">
+                  <img src="img/jar-buckwheat-500-mobile.png" srcset="img/jar-buckwheat-500-mobile@2x.png 2x" alt="">
+                </picture>
+              </a>
+              <div class="catalog__block-descrip">
+                <a href="#" class="catalog__link-title">
+                  <h3 class="catalog__title">
+                    Cat Energy
+                    Slim
+                    500 г
+                  </h3>
+                </a>
+                <dl class="catalog__info-about-products">
+                  <div class="catalog__descrip-product catalog__descrip-product--line">
+                    <dt class="catalog__title">Масса</dt>
+                    <dd class="catalog__value">500 г</dd>
+                  </div>
+                  <div class="catalog__descrip-product">
+                    <dt class="catalog__title">Вкус</dt>
+                    <dd class="catalog__value">Гречка</dd>
+                  </div>
+                  <div class="catalog__descrip-product">
+                    <dt class="catalog__title">Цена</dt>
+                    <dd class="catalog__value">400 Р.</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
-            <div class="list-products-info__taste">
-              <dt class="list-products-info__title">Вкус</dt>
-              <dd class="list-products-info__value">Гречка</dd>
-            </div>
-            <div class="list-products-info__price">
-              <dt class="list-products-info__title">Цена</dt>
-              <dd class="list-products-info__value">400 Р.</dd>
-            </div>
-          </dl>
-          <button type="button" class="button list-products__button">
-            заказать
-          </button>
-        </li>
+            <button type="button" class="button catalog__button">
+              Заказать
+            </button>
+          </li>
 
-        <li class="list-products__item">
-          <a href="#" class="list-products__link-image">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/photo-3-big-desktop.webp 1x, img/photo-3-big-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-3-big-tablet.webp 1x, img/photo-3-big-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-3-big-mobile.webp 1x, img/photo-3-big-mobile@2x.webp 2x" alt="">
+          <li class="catalog__item">
+            <div class="catalog__wrapper-descrip">
+              <a href="#" class="catalog__link-image">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/jar-buckwheat-1000-desktop.webp 1x, img/jar-buckwheat-1000-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/jar-buckwheat-1000-tablet.webp 1x, img/jar-buckwheat-1000-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/jar-buckwheat-1000-mobile.webp 1x, img/jar-buckwheat-1000-mobile@2x.webp 2x" alt="">
 
-              <source media="(min-width: 1440px)" srcset="img/photo-3-big-desktop.jpg 1x, img/photo-3-big-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-3-big-tablet.jpg 1x, img/photo-3-big-tablet@2x.jpg 2x">
-              <img src="img/photo-3-big-mobile.jpg" srcset="img/photo-3-big-mobile@2x.jpg 2x" alt="">
-            </picture>
-          </a>
-          <a href="#" class="list-products__link-title">
-            <h3 class="list-products__title">
-              Cat Energy
-              Slim
-              1000 г
-            </h3>
-          </a>
-          <dl class="list-products-info">
-            <div class="list-products-info__weight">
-              <dt class="list-products-info__title">Масса</dt>
-              <dd class="list-products-info__value">1000 г</dd>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/jar-buckwheat-1000-desktop.png 1x, img/jar-buckwheat-1000-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/jar-buckwheat-1000-tablet.png 1x, img/jar-buckwheat-1000-tablet@2x.png 2x">
+                  <img src="img/jar-buckwheat-1000-mobile.png" srcset="img/jar-buckwheat-1000-mobile@2x.png 2x" alt="">
+                </picture>
+              </a>
+              <div class="catalog__block-descrip">
+                <a href="#" class="catalog__link-title">
+                  <h3 class="catalog__title">
+                    Cat Energy
+                    Slim
+                    1000 г
+                  </h3>
+                </a>
+                <dl class="catalog__info-about-products">
+                  <div class="catalog__descrip-product catalog__descrip-product--line">
+                    <dt class="catalog__title">Масса</dt>
+                    <dd class="catalog__value">1000 г</dd>
+                  </div>
+                  <div class="catalog__descrip-product">
+                    <dt class="catalog__title">Вкус</dt>
+                    <dd class="catalog__value">Гречка</dd>
+                  </div>
+                  <div class="catalog__descrip-product">
+                    <dt class="catalog__title">Цена</dt>
+                    <dd class="catalog__value">700 Р.</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
-            <div class="list-products-info__taste">
-              <dt class="list-products-info__title">Вкус</dt>
-              <dd class="list-products-info__value">Гречка</dd>
-            </div>
-            <div class="list-products-info__price">
-              <dt class="list-products-info__title">Цена</dt>
-              <dd class="list-products-info__value">700 Р.</dd>
-            </div>
-          </dl>
-          <button type="button" class="button list-products__button">
-            заказать
-          </button>
-        </li>
+            <button type="button" class="button catalog__button">
+              заказать
+            </button>
+          </li>
 
-        <li class="list-products__item">
-          <a href="#" class="list-products__link-image">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/photo-4-small-desktop.webp 1x, img/photo-4-small-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-4-small-tablet.webp 1x, img/photo-4-small-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-4-small-mobile.webp 1x, img/photo-4-small-mobile@2x.webp 2x" alt="">
+          <li class="catalog__item">
+            <div class="catalog__wrapper-descrip">
+              <a href="#" class="catalog__link-image">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/jar-rice-500-desktop.webp 1x, img/jar-rice-500-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/jar-rice-500-tablet.webp 1x, img/jar-rice-500-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/jar-rice-500-mobile.webp 1x, img/jar-rice-500-mobile@2x.webp 2x"
+                    alt="">
 
-              <source media="(min-width: 1440px)" srcset="img/photo-4-small-desktop.jpg 1x, img/photo-4-small-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-4-small-tablet.jpg 1x, img/photo-4-small-tablet@2x.jpg 2x">
-              <img src="img/photo-4-small-mobile.jpg" srcset="img/photo-4-small-mobile@2x.jpg 2x" alt="">
-            </picture>
-          </a>
-          <a href="#" class="list-products__link-title">
-            <h3 class="list-products__title">
-              Cat Energy
-              Slim
-              500 г
-            </h3>
-          </a>
-          <dl class="list-products-info">
-            <div class="list-products-info__weight">
-              <dt class="list-products-info__title">Масса</dt>
-              <dd class="list-products-info__value">500 г</dd>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/jar-rice-500-desktop.png 1x, img/jar-rice-500-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/jar-rice-500-tablet.png 1x, img/jar-rice-500-tablet@2x.png 2x">
+                  <img src="img/jar-rice-500-mobile.png" srcset="img/jar-rice-500-mobile@2x.png 2x" alt="">
+                </picture>
+              </a>
+              <div class="catalog__block-descrip">
+                <a href="#" class="catalog__link-title">
+                  <h3 class="catalog__title">
+                    Cat Energy
+                    Slim
+                    500 г
+                  </h3>
+                </a>
+                <dl class="catalog__info-about-products">
+                  <div class="catalog__descrip-product catalog__descrip-product--line">
+                    <dt class="catalog__title">Масса</dt>
+                    <dd class="catalog__value">500 г</dd>
+                  </div>
+                  <div class="catalog__descrip-product">
+                    <dt class="catalog__title">Вкус</dt>
+                    <dd class="catalog__value">Гречка</dd>
+                  </div>
+                  <div class="catalog__descrip-product">
+                    <dt class="catalog__title">Цена</dt>
+                    <dd class="catalog__value">400 Р.</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
-            <div class="list-products-info__taste">
-              <dt class="list-products-info__title">Вкус</dt>
-              <dd class="list-products-info__value">Рис</dd>
-            </div>
-            <div class="list-products-info__price">
-              <dt class="list-products-info__title">Цена</dt>
-              <dd class="list-products-info__value">500 Р.</dd>
-            </div>
-          </dl>
-          <button type="button" class="button list-products__button">
-            заказать
-          </button>
-        </li>
+            <button type="button" class="button catalog__button">
+              Заказать
+            </button>
+          </li>
 
-        <li class="list-products__item more-products">
-          <h3 class="more-products__title">
-            Показать еще 100500 товаров
-          </h3>
-          <p class="more-products__paragraph">
-            На самом деле вкусов гораздо больше!
-          </p>
-          <button type="button" class="button more-products__button more-products__button--gray">
-            заказать
-          </button>
-        </li>
-      </ul>
+          <li class="catalog__more-products">
+            <a href="#" class="catalog__link-more-products">
+              <h3 class="catalog__title-more-products">
+                Показать еще 100500 товаров
+              </h3>
+              <p class="catalog__paragraph-more-products">
+                На самом деле вкусов гораздо больше!
+              </p>
+              <button type="button" class="button catalog__button catalog__button--gray">
+                Показать все
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="additional-goods">
-      <h2 class="additional-goods__title">
-        Дополнительные товары
-      </h2>
-      <ul class="list-additional-goods">
-        <li class="list-additional-goods__item">
-          <h3 class="list-additional-goods__title">
-            Сахарозаменитель
-          </h3>
-          <div class="descrip-additional-goods">
-            <span class="descrip-additional-goods__weight">
-              1 упаковка (100 г)
-            </span>
-            <span class="descrip-additional-goods__price">
-              200 Р.
-            </span>
-          </div>
-          <button class="button list-additional-goods__button">
-            заказать
-          </button>
-        </li>
+      <div class="container">
+        <h2 class="additional-goods__title-main">
+          Дополнительные товары
+        </h2>
+        <div class="additional-goods__wrapper">
+          <ul class="additional-goods__list">
+            <li class="additional-goods__item">
+              <div class="additional-goods__block-title-descrip">
+                <h3 class="additional-goods__title">
+                  Сахарозаменитель
+                </h3>
+                <div class="additional-goods__descrip">
+                  <span class="additional-goods__weight">
+                    1 упаковка (100 г)
+                  </span>
+                  <span class="additional-goods__price">
+                    200 Р.
+                  </span>
+                </div>
+              </div>
+              <button class="button additional-goods__button">
+                заказать
+              </button>
+            </li>
 
-        <li class="list-additional-goods__item">
-          <h3 class="list-additional-goods__title">
-            Питьевая вода
-          </h3>
-          <div class="descrip-additional-goods">
-            <span class="descrip-additional-goods__weight">
-              5 литров
-            </span>
-            <span class="descrip-additional-goods__price">
-              50 Р.
-            </span>
-          </div>
-          <button class="button-list list-additional-goods__button">
-            заказать
-          </button>
-        </li>
+            <li class="additional-goods__item">
+              <div class="additional-goods__block-title-descrip">
+                <h3 class="additional-goods__title">
+                  Питьевая вода
+                </h3>
+                <div class="additional-goods__descrip">
+                  <span class="additional-goods__weight">
+                    5 литров
+                  </span>
+                  <span class="additional-goods__price">
+                    50 Р.
+                  </span>
+                </div>
+              </div>
+              <button class="button additional-goods__button">
+                заказать
+              </button>
+            </li>
 
-        <li class="list-additional-goods__item">
-          <h3 class="list-additional-goods__title">
-            Молоко
-          </h3>
-          <div class="descrip-additional-goods">
-            <span class="descrip-additional-goods__weight">
-              1 литр
-            </span>
-            <span class="descrip-additional-goods__price">
-              100 Р.
-            </span>
-          </div>
-          <button class="button-list list-additional-goods__button">
-            заказать
-          </button>
-        </li>
+            <li class="additional-goods__item">
+              <div class="additional-goods__block-title-descrip">
+                <h3 class="additional-goods__title">
+                  Молоко
+                </h3>
+                <div class="additional-goods__descrip">
+                  <span class="additional-goods__weight">
+                    1 литр
+                  </span>
+                  <span class="additional-goods__price">
+                    100 Р.
+                  </span>
+                </div>
+              </div>
+              <button class="button additional-goods__button">
+                заказать
+              </button>
+            </li>
 
-        <li class="list-additional-goods__item">
-          <h3 class="list-additional-goods__title">
-            Витамины
-          </h3>
-          <div class="descrip-additional-goods">
-            <span class="descrip-additional-goods__weight">
-              1 упаковка (30 г)
-            </span>
-            <span class="descrip-additional-goods__price">
-              300 Р.
-            </span>
+            <li class="additional-goods__item additional-goods__item--line">
+              <div class="additional-goods__block-title-descrip">
+                <h3 class="additional-goods__title">
+                  Витамины
+                </h3>
+                <div class="additional-goods__descrip">
+                  <span class="additional-goods__weight">
+                    1 упаковка (30 г)
+                  </span>
+                  <span class="additional-goods__price">
+                    300 Р.
+                  </span>
+                </div>
+              </div>
+              <button class="button additional-goods__button">
+                заказать
+              </button>
+            </li>
+          </ul>
+          <div class="additional-goods__present">
+            <p class="additional-goods__paragraph">
+              Закажите все
+              и получите чехол для
+              кота в подарок!
+            </p>
           </div>
-          <button class="button-list list-additional-goods__button">
-            заказать
-          </button>
-        </li>
-      </ul>
-      <div class="present">
-        <p class="present__paragraph">
-          Закажите все
-          и получите чехол для
-          кота в подарок!
-        </p>
+        </div>
       </div>
     </section>
     <section class="map-cat-energy">
-      <div class="invite-address">
-        <h4 class="invite-address__title">
-          приглашаем к сотрудничеству дилеров!
+      <div class="map-cat-energy__invite-address map-cat-energy__invite-address--gray">
+        <h4 class="map-cat-energy__title-invite">
+          Приглашаем к сотрудничеству дилеров!
         </h4>
-        <address class="invite-address__address">
+        <address class="map-cat-energy__address">
           ул. Большая
           Конюшенная, д. 19/8
           Санкт-Петербург
         </address>
       </div>
-      <div class="map-cat-energy__map">
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" alt="">
+      <div class="map-cat-energy__map-block">
+        <div class="map-cat-energy__map">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" alt="">
 
-          <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
-          <img src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" alt="">
-        </picture>
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+            <img class="map-cat-energy__image-map" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" alt="">
+          </picture>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4114.359294113767!2d30.322711145748926!3d59.93851799897699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631f6df7d3481%3A0xc0016be317f9a6fd!2sCat%20Energy!5e0!3m2!1sru!2sru!4v1654255337140!5m2!1sru!2sru"
+          width="320" height="362" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4114.359294113767!2d30.322711145748926!3d59.93851799897699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631f6df7d3481%3A0xc0016be317f9a6fd!2sCat%20Energy!5e0!3m2!1sru!2sru!4v1654255337140!5m2!1sru!2sru"
-        width="320" height="362" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        style="display: none;"></iframe>
-      <!--style="display: none" - это я добавлю потом в стилях -->
     </section>
   </main>
   <footer class="main-footer">
-    <a href="#" class="main-footer__link">
-      <svg width="128" height="24">
-        <use href="img/sprite.svg#footer-logo-text"></use>
-      </svg>
+    <a href="#" class="main-footer__link-text">
+      <img src="img/icons/logo-text-mobile.svg" width="128" height="24" alt="Cat Energy">
     </a>
-    <ul class="list-social">
-      <li class="list-social__item">
-        <a href="#" class="list-social__link">
+    <ul class="main-footer__list-social">
+      <li class="main-footer__item">
+        <a href="#" class="main-footer__link">
           <svg width="27" height="17">
             <use href="img/sprite.svg#vk"></use>
           </svg>
         </a>
       </li>
-      <li class="list-social__item">
-        <a href="#" class="list-social__link">
+      <li class="main-footer__item">
+        <a href="#" class="main-footer__link">
           <svg width="24" height="19">
             <use href="img/sprite.svg#youtube"></use>
           </svg>
         </a>
       </li>
-      <li class="list-social__item">
-        <a href="#" class="list-social__link">
+      <li class="main-footer__item">
+        <a href="#" class="main-footer__link">
           <svg width="20" height="17">
             <use href="img/sprite.svg#telegram"></use>
           </svg>
@@ -470,12 +546,14 @@
       </li>
     </ul>
     <a href="https://htmlacademy.ru/intensive/adaptive" class="main-footer__link-academy">
-      <span>HTML academy</span>
+      <span class="main-footer__span-academy">HTML Academy</span>
       <svg width="27" height="34">
         <use href="img/sprite.svg#icon-html-academy"></use>
       </svg>
     </a>
   </footer>
+
+  <script src="js/index.js"></script>
 </body>
 
 </html>
