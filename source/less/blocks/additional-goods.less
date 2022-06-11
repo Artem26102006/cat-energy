@@ -1,0 +1,287 @@
+.additional-goods {
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+
+.additional-goods__title-main {
+  margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 36px;
+}
+
+.additional-goods__list {
+  .list-none();
+}
+
+.additional-goods__item {
+  padding-top: 13px;
+  padding-bottom: 19px;
+  position: relative;
+  // border-top: 0.5px solid @gray-dark;
+  // border-bottom: 0.5px solid @gray-dark;
+}
+
+.additional-goods__item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 0;
+  background-color: @gray-dark;
+}
+
+.additional-goods__item--line {
+  position: relative;
+}
+
+.additional-goods__item--line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: @gray-dark;
+}
+
+.additional-goods__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: @black-very;
+  margin-bottom: 13px;
+}
+
+.additional-goods__button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.additional-goods__descrip {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 15px;
+}
+
+.additional-goods__present {
+  width: 280px;
+  margin: 0 auto;
+  background: url("../../img/background-with-cat-gift-case-mobile.png")
+    no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  margin-top: 35px;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../../img/background-with-cat-gift-case-mobile@2x.png")
+      no-repeat;
+    background-size: 320px auto;
+  }
+}
+
+.additional-goods__present::before {
+  content: url("../../img/icons/icon-gift.svg");
+  position: absolute;
+  width: 78px;
+  height: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 59px;
+}
+
+.additional-goods__paragraph {
+  margin: 0;
+  color: @white;
+  font-size: 16px;
+  line-height: 20px;
+  width: 161px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 167px;
+  padding-bottom: 44px;
+}
+
+@media (min-width: @tablet-width) {
+  .additional-goods__item::before {
+    display: none;
+  }
+
+  .additional-goods__item--line {
+    position: relative;
+  }
+
+  .additional-goods__item--line::after {
+    display: none;
+  }
+
+  .additional-goods {
+    padding-top: 68px;
+    padding-bottom: 35px;
+  }
+
+  .additional-goods__title-main {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0 0 80px;
+  }
+
+  .additional-goods__list {
+    padding: 26px 38px 28px 38px;
+    border: 2px solid @gray-dark;
+  }
+
+  .additional-goods__descrip {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0;
+    column-gap: 51px;
+  }
+
+  .additional-goods__title {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+  }
+
+  .additional-goods__block-title-descrip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  .additional-goods__present {
+    width: 708px;
+    margin: 0 auto;
+    background: url("../../img/background-with-cat-gift-case-tablet.png")
+      no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    margin-top: 35px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../../img/background-with-cat-gift-case-tablet@2x.png")
+        no-repeat;
+      background-size: 708px auto;
+    }
+  }
+
+  .additional-goods__present::before {
+    content: url("../../img/icons/icon-gift.svg");
+    position: absolute;
+    width: 78px;
+    height: 80px;
+    left: 116px;
+    top: 59px;
+  }
+
+  .additional-goods__paragraph {
+    text-align: start;
+    position: relative;
+    padding-top: 71px;
+    padding-bottom: 69px;
+    display: flex;
+    margin-right: 124px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional-goods {
+    padding-top: 76px;
+    padding-bottom: 86px;
+  }
+
+  .additional-goods__wrapper {
+    display: grid;
+    grid-template-columns: 896px 245px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .additional-goods__present {
+    width: 100%;
+    /* width: 245px; */
+    background: url(../../img/background-with-cat-gift-case-desktop.png)
+      no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    margin: 0;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../../img/background-with-cat-gift-case-desktop@2x.png") no-repeat;
+      background-size: 320px auto;
+    }
+  }
+
+  .additional-goods__list {
+    padding: 0;
+    border: none;
+    border-top: 1px solid rgb(205 205 205);
+    border-bottom: 1px solid rgb(205 205 205);
+  }
+
+  .additional-goods__item {
+    padding: 15px 0 17px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .additional-goods__item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    background-color: @gray;
+  }
+
+  .additional-goods__button {
+    width: 244px;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .additional-goods__title {
+    width: 161px;
+    margin-right: 163px;
+  }
+
+  .additional-goods__block-title-descrip {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .additional-goods__descrip {
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0;
+    column-gap: 115px;
+  }
+
+  .additional-goods__weight {
+    width: 132px;
+  }
+
+  .additional-goods__paragraph {
+    text-align: center;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    padding: 185px 0 0;
+    padding-bottom: 45px;
+  }
+}

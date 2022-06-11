@@ -1,0 +1,157 @@
+.how-working {
+  padding-top: 20px;
+  padding-bottom: 49px;
+}
+
+// .container {
+//   width: 280px;
+//   margin: 0 auto;
+// }
+
+// вопрос как цифры вставить?
+
+.how-working__title {
+  width: 245px;
+  line-height: 46px;
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 40px
+}
+
+.how-working__list {
+  .list-none();
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.how-working__item {
+  display: flex;
+  width: 275px;
+}
+
+.how-working__block {
+  width: 60px;
+  height: 60px;
+  background-color: @green;
+  position: relative;
+}
+
+.how-working__leaf::before {
+  content: url("../../img/icons/icon-leaf.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.how-working__tub::before {
+  content: url("../../img/icons/icon-tub.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.how-working__eat::before {
+  content: url("../../img/icons/icon-eat.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.how-working__time::before {
+  content: url("../../img/icons/icon-time.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.how-working__paragraph {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 195px;
+  margin-left: auto;
+  line-height: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .how-working {
+    padding-top: 45px;
+    padding-bottom: 47px;
+  }
+
+  .container {
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  .how-working__title {
+    font-size: 60px;
+    line-height: 60px;
+    width: 405px;
+  }
+
+  .how-working__list {
+    display: grid;
+    margin: 0;
+    grid-template-columns: 235px 248px;
+    row-gap: 30px;
+    column-gap: 175px;
+  }
+
+  .how-working__item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    row-gap: 31px;
+  }
+
+
+  .how-working__block {
+    width: 80px;
+    height: 80px;
+    margin-top: 40px;
+  }
+
+  .how-working__paragraph {
+    font-size: 16px;
+    width: 230px;
+    margin-left: 0;
+    line-height: 24px;
+    margin-bottom: 57px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .how-working {
+    padding-top: 71px;
+    padding-bottom: 69px;
+  }
+
+  .container {
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  .how-working__title {
+    font-size: 60px;
+    line-height: 60px;
+    width: 405px;
+    margin-bottom: 72px;
+  }
+
+  .how-working__paragraph {
+    width: 245px;
+  }
+
+  .how-working__list {
+    display: grid;
+    grid-template-columns: 230px 246px 248px 250px;
+    column-gap: 0;
+    row-gap: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
