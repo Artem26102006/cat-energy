@@ -12,6 +12,10 @@
   height: 19px;
 }
 
+.navigation__link {
+  padding: 8px 0 8px 0;
+}
+
 @media (min-width: @tablet-width) {
   .navigation__button::before {
     display: none;
@@ -30,6 +34,14 @@
 
   .navigation__link {
     color: @black;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      border-bottom: 2px solid @green;
+    }
   }
 }
 
@@ -40,9 +52,25 @@
 
   .navigation__link {
     color: @white;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      border-bottom: 2px solid @white;
+    }
   }
 
   .navigation__link--black {
     color: @black;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      border-bottom: 2px solid @green;
+    }
   }
 }
