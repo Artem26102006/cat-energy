@@ -1,24 +1,44 @@
 .food-for-cats {
-  background: url("../../img/background-with-cat-mobile.jpg") no-repeat;
-  padding-top: 25px;
-  background-position: center top;
+  position: relative;
+}
+
+.food-for-cats__back-image {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  background-color: @green;
+  height: 302px;
+  background: url(../img/background-with-cat-mobile.jpg) no-repeat;
+  background-size: cover;
+  z-index: -1;
 
   @media (min-resolution: 2dppx) {
-    background: url("../../img/background-with-cat-mobile@2x.jpg") no-repeat;
+    background: url("../img/background-with-cat-mobile@2x.jpg") no-repeat;
     background-size: 320px auto;
-    background-position: center top;
   }
 
-  &::after {
-    content: "";
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
     position: absolute;
-    width: 320px;
-    height: 302px;
+    top: 0;
+    right: 0;
+    transform: translateX(0);
+    width: 50%;
     background-color: @green;
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -4;
+    height: 60%;
+    background: url("../img/background-with-cat-desktop.jpg") no-repeat;
+    background-position: 50%;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/background-with-cat-desktop@2x.jpg") no-repeat;
+      background-size: cover;
+    }
   }
 }
 
@@ -32,6 +52,7 @@
   line-height: 36px;
   font-weight: 400;
   margin: 0 auto;
+  padding-top: 27px;
   margin-bottom: 25px;
   text-align: center;
 }
@@ -85,6 +106,14 @@
   font-weight: 400;
   margin-bottom: 35px;
   padding-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    width: 340px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+  }
 }
 
 .food-for-cats__title-cat-slim {
@@ -107,6 +136,21 @@
 
 .food-for-cats__item-block-pro {
   background: url("../img/icons/cat-pro.svg") no-repeat;
+}
+
+.food-for-cats__picture img {
+  width: 280px;
+  height: 270px;
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
+  }
 }
 
 .food-for-cats__link {
@@ -149,15 +193,10 @@
     padding-bottom: 530px;
   }
 
-  // .food-for-cats__list-programms {
-  //   padding-top: 0;
-  //   row-gap: 30px;
-  // }
-
   .food-for-cats__picture {
     position: absolute;
     z-index: -1;
-    top: 205px;
+    bottom: 0;
   }
 
   .food-for-cats__button {
@@ -176,6 +215,7 @@
     margin: 0;
     margin-left: 90px;
     margin-bottom: 41px;
+    padding: 0;
   }
 
   .food-for-cats__paragraph {
@@ -240,19 +280,7 @@
     width: 100%;
     margin: 0 auto;
     padding-top: 141px;
-    background: url("../img/background-with-cat-desktop.jpg") no-repeat;
-    background-position: right top;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 720px;
-      height: 694px;
-      background-color: @green;
-      top: 0;
-      right: 0;
-      z-index: -4;
-    }
+    position: relative;
   }
 
   .food-for-cats__item-block-slim {

@@ -1,11 +1,18 @@
 .main-header {
-  width: 320px;
+  width: 100%;
   box-sizing: border-box;
+  padding: 10px 20px 17px 20px;
+}
+
+.container__header {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px 17px 20px;
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
 }
 
 .main-header__link {
@@ -29,10 +36,6 @@
   .main-header {
     width: 100%;
     box-sizing: border-box;
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
     padding: 24px 30px 65px 30px;
   }
 

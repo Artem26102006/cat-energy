@@ -14,6 +14,24 @@
 .how-working__item {
   position: relative;
   width: 275px;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      counter-increment: myCounter;
+      content:counter(myCounter);
+      position: absolute;
+      color: @gray-very-light;
+      font-size: 280px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 127px;
+      z-index: -1;
+      display: inline-block;
+      text-align: center;
+      line-height: 40px;
+    }
+  }
 }
 
 .how-working__one {
@@ -90,6 +108,7 @@
   row-gap: 20px;
 
   @media (min-width: @tablet-width) {
+    counter-reset: myCounter;
     display: grid;
     margin: 0;
     grid-template-columns: 235px 248px;
