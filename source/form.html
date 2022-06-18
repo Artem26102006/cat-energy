@@ -13,7 +13,7 @@
 
 <body class="page-body">
   <header class="main-header">
-    <div class="container__header">
+    <div class="container container__header">
       <a href="#" class="main-header__link">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg">
@@ -45,7 +45,7 @@
 
   <main class="main-container">
     <section class="program-selection">
-      <div class="program-selection__container">
+      <div class="container-form">
         <h1 class="program-selection__title">Подбор программы</h1>
 
         <p class="paragraph program-selection__paragraph">
@@ -54,7 +54,7 @@
       </div>
 
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-        <div class="program-selection__container">
+        <div class="container-form">
           <div class="form__wrapper-about-cat-and-choose-way">
             <div class="form__about-cat">
               <label class="form__about-cat-field">
@@ -91,12 +91,14 @@
           </div>
         </div>
         <div class="form__about-owner">
-          <div class="form__block-title">
-            <h2 class="form__about-owner-title form__title title-min">
-              Контактные данные (владельца кота)
-            </h2>
+          <div class="line">
+            <div class="container-form">
+              <h2 class="line__title title__contacts">
+                Контактные данные (владельца кота)
+              </h2>
+            </div>
           </div>
-          <div class="program-selection__container">
+          <div class="container-form">
             <div class="form__about-owner-block">
               <label class="form__about-owner-field">
                 <span class="form__about-owner-field-label form__about-owner-field-label-email">E-mail:*</span>
@@ -118,21 +120,27 @@
           </div>
         </div>
         <div class="form__comment">
-          <div class="form__block-title">
-            <label class="form__comment-title form__title title-min" for="comment">Комментарий</label>
+          <div class="line">
+            <div class="container-form">
+              <h2 class="line__title">
+                Комментарий
+              </h2>
+            </div>
           </div>
-          <div class="program-selection__container">
+          <div class="container-form">
             <textarea class="comment__text" name="comment" id="comment"
               placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </div>
         <div class="form__additional">
-          <div class="form__block-title">
-            <h2 class="form__additional-title form__title title-min">
-              Дополнительно
-            </h2>
+          <div class="line">
+            <div class="container-form">
+              <h2 class="line__title">
+                Дополнительно
+              </h2>
+            </div>
           </div>
-          <div class="program-selection__container">
+          <div class="container-form">
             <div class="form__additional-block">
               <label class="form__additional-field form__additional-control">
                 <input class="form__additional-field-control" type="checkbox" name="sugar" value="kilograms" />
@@ -157,7 +165,7 @@
             </div>
           </div>
         </div>
-        <div class="program-selection__container">
+        <div class="container-form">
           <div class="form__block-button">
             <button type="submit" class="button form-cat-energy__button">
               отправить заявку
