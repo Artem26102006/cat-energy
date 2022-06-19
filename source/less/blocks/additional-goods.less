@@ -85,16 +85,9 @@
   color: @black-very;
   margin-bottom: 13px;
 
-  // @media (min-width: @tablet-width) {
-  //   font-size: 16px;
-  //   line-height: 16px;
-  //   margin: 0;
-  // }
-
   @media (min-width: @desktop-width) {
     width: 161px;
     margin-right: 163px;
-
   }
 }
 
@@ -104,9 +97,8 @@
   padding: 10px;
 
   @media (min-width: @desktop-width) {
-    width: 27%;
+    width: 244px;
     box-sizing: border-box;
-    padding: 10px;
   }
 }
 
@@ -130,7 +122,8 @@
 }
 
 .additional-goods__present {
-  width: 280px;
+  width: 100%;
+  min-height: 290px;
   margin: 0 auto;
   background: url("../img/background-with-cat-gift-case-mobile.png")
     no-repeat;
@@ -146,6 +139,7 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
+    min-height: 200px;
     margin: 0 auto;
     background: url("../../img/background-with-cat-gift-case-tablet.png")
       no-repeat;
@@ -155,16 +149,16 @@
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/background-with-cat-gift-case-tablet@2x.png")
+      background: url("../img/background-with-cat-gift-case-tablet@2x.png")
         no-repeat;
       background-size: cover;
     }
   }
 
   @media (min-width: @desktop-width) {
-    width: 20%;
-    height: 289px;
-    background: url(../../img/background-with-cat-gift-case-desktop.png)
+    width: 245px;
+    min-height: 289px;
+    background: url(../img/background-with-cat-gift-case-desktop.png)
       no-repeat;
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
@@ -172,7 +166,7 @@
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/background-with-cat-gift-case-desktop@2x.png")
+      background: url("../img/background-with-cat-gift-case-desktop@2x.png")
         no-repeat;
       background-size: 320px auto;
     }
@@ -211,12 +205,10 @@
   margin: 0 auto;
   position: relative;
   padding-top: 167px;
-  padding-bottom: 44px;
 
   @media (min-width: @tablet-width) {
     text-align: start;
     padding-top: 71px;
-    padding-bottom: 69px;
     margin-right: 124px;
   }
 
@@ -224,7 +216,6 @@
     text-align: center;
     margin: 0 auto;
     padding: 185px 0 0;
-    padding-bottom: 45px;
   }
 }
 
