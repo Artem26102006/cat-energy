@@ -23,43 +23,44 @@
     }
 
     @media (min-width: @desktop-width) {
-
       // тянется:
+      // content: "";
+      // display: block;
+      // position: absolute;
+      // width: 50%;
+      // height: 694px;
+      // background-color: @green;
+      // background: url("../img/background-with-cat-desktop.jpg") no-repeat;
+      // background-size: cover;
+      // background-position: center;
+      // z-index: -100;
+      // margin-top: -142px;
+      // transform: translateX(0);
+
+      // @media (min-resolution: 2dppx) {
+      //   background: url("../img/background-with-cat-desktop@2x.jpg") no-repeat;
+      //   background-size: 320px auto;
+      // }
+
+      //  не тянется
       content: "";
       display: block;
       position: absolute;
-      width: 50%;
+      width: 740px;
       height: 694px;
       background-color: @green;
       background: url("../img/background-with-cat-desktop.jpg") no-repeat;
-      background-size: cover;
-      background-position: center;
+      background-position: right bottom;
       z-index: -100;
       margin-top: -142px;
+      right: 0;
+      left: 50%;
       transform: translateX(0);
 
       @media (min-resolution: 2dppx) {
         background: url("../img/background-with-cat-desktop@2x.jpg") no-repeat;
         background-size: 320px auto;
       }
-
-      // Идет по контенту:
-
-      // .food::before {
-      //   content: "";
-      //   display: block;
-      //   position: absolute;
-      //   width: 740px;
-      //   height: 694px;
-      //   background-color: @green;
-      //   background: url("../img/background-with-cat-desktop.jpg") no-repeat;
-      //   background-position: right bottom;
-      //   z-index: -100;
-      //   margin-top: -142px;
-      //   right: 0;
-      //   left: 50%;
-      // transform: translateX(0);
-      // }
     }
   }
 }
