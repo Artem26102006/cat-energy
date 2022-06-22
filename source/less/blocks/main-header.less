@@ -31,7 +31,7 @@
   .main-header {
     box-sizing: border-box;
     padding: 0;
-    padding: 25px 0 64px 0;
+    padding: 0;
   }
 
   .main-header__logo-text {
@@ -41,6 +41,15 @@
   .main-header__logo-image {
     width: 174px;
     height: 52px;
+  }
+
+  .container__header {
+    display: grid;
+    grid-template-columns: 174px auto;
+    align-items: center;
+    min-height: 51px;
+    box-sizing: border-box;
+    padding: 24px 0 65px 0;
   }
 }
 
