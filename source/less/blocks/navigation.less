@@ -2,21 +2,73 @@
   display: none;
 }
 
+@media (max-width: 767px) {
+  .navigation__list-menu--open {
+    .list-none();
+    position: absolute;
+    left: 50%;
+    top: 71px;
+    width: 100%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    text-align: center;
+    background-color: @white;
+    z-index: 101;
+    border-top: 1px solid @gray-light;
+    border-bottom: 1px solid @gray-light;
+  }
+}
+
 .navigation__button {
   background: none;
 }
 
-.navigation__button::before {
-  content: url("../img/icons/burger-open.svg");
+.navigation__button {
+  &::before {
+    content: url("../img/icons/burger-open.svg");
+    width: 24px;
+    height: 19px;
+  }
+}
+
+.navigation__button--toggle {
   width: 24px;
   height: 19px;
+  background: none;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: @black;
+    left: 0;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: @black;
+    left: 0;
+    transform: rotate(-45deg);
+  }
 }
 
 .navigation__link {
-  padding: 8px 0 8px 0;
+  display: block;
+  padding: 22px 0 24px 0;
   text-decoration: none;
   text-transform: uppercase;
+  color: @black;
+  border: 1px solid @gray-light;
 }
+
 
 @media (min-width: @tablet-width) {
   .navigation__button::before {
@@ -28,11 +80,11 @@
   }
 
   .navigation__item {
-    margin-right: 35px
+    margin-right: 35px;
   }
 
   .navigation__item:last-child {
-    margin-right: 0
+    margin-right: 0;
   }
 
   .navigation__list-menu {
@@ -45,6 +97,8 @@
 
   .navigation__link {
     color: @black;
+    padding: 0;
+    border: none;
 
     &:hover {
       opacity: 0.6;

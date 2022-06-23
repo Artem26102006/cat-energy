@@ -125,55 +125,6 @@
   }
 }
 
-.example__slider-before-after {
-  width: 210px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  font-size: 16px;
-  padding-top: 27px;
-
-  @media (min-width: @tablet-width) {
-    column-gap: 23px;
-    font-size: 20px;
-    width: 592px;
-    padding-top: 366px;
-    padding-bottom: 56px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0;
-    padding-top: 29px;
-  }
-}
-
-.example__slider-before-button,
-.example__slider-after-button {
-  text-transform: uppercase;
-  background: none;
-  color: @black;
-}
-
-.example__slider-line {
-  width: 86px;
-  background-color: @white;
-  height: 14px;
-  border-radius: 6px;
-  position: relative;
-}
-
-.example__button-before-after {
-  position: absolute;
-  width: 36px;
-  height: 6px;
-  background-color: @green;
-  border-radius: 6px;
-  top: 50%;
-  left: 6px;
-  transform: translateY(-50%);
-}
-
 @media (min-width: @tablet-width) {
   .example__title {
     margin-bottom: 63px;
@@ -238,39 +189,6 @@
     width: 142px;
   }
 
-  .example__slider-line {
-    width: 426px;
-    height: 6px;
-    background-color: @gray-almost-dark;
-    border-radius: 6px;
-    position: relative;
-  }
-
-  .example__button-before-after {
-    width: 34px;
-    height: 34px;
-    background-color: @white;
-    position: absolute;
-    border-radius: 50%;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .example__button-before-after {
-    &::before {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      width: 8px;
-      height: 8px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: @green;
-    }
-  }
-
   .example__wrap {
     position: relative;
     width: 708px;
@@ -280,6 +198,7 @@
   .example__wrap-picture {
     display: flex;
     justify-content: center;
+    min-height: 462px;
   }
 
   .example__slider-picture {
@@ -339,5 +258,13 @@
     width: 100%;
     background-color: @gray-light;
     margin: 0 auto;
+  }
+
+  .example__wrap-picture {
+    min-height: auto;
+  }
+
+  .example__slider-picture {
+    bottom: 90px;
   }
 }
