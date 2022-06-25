@@ -12,7 +12,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 13px;
+    margin-bottom: 0;
   }
 }
 
@@ -21,6 +21,11 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 input[type="range"] {

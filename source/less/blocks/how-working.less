@@ -1,5 +1,5 @@
 .how-working {
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 49px;
 }
 
@@ -107,7 +107,7 @@
   .list-none();
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 25px;
 
   @media (min-width: @tablet-width) {
     counter-reset: myCounter;
@@ -115,7 +115,7 @@
     margin: 0;
     grid-template-columns: 235px 248px;
     row-gap: 30px;
-    column-gap: 175px;
+    column-gap: 150px;
   }
 
   @media (min-width: @desktop-width) {
@@ -130,7 +130,7 @@
 
 @media (min-width: @tablet-width) {
   .how-working {
-    padding-top: 45px;
+    padding-top: 54px;
     padding-bottom: 47px;
   }
 
@@ -209,13 +209,13 @@
     font-size: 16px;
     width: 230px;
     line-height: 24px;
-    margin: 151px 29px 57px 0;
+    margin: 149px 29px 57px 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .how-working {
-    padding-top: 71px;
+    padding-top: 75px;
     padding-bottom: 69px;
   }
 
@@ -228,5 +228,32 @@
 
   .how-working__paragraph {
     width: 245px;
+    margin-top: 110px;
+  }
+
+  .how-working__one {
+    &::before {
+      top: 0;
+    }
+  }
+
+  .how-working__two {
+    &::before {
+      top: 0;
+      left: 5px;
+    }
+  }
+
+  .how-working__three {
+    &::before {
+      top: 0;
+      left: 5px;
+    }
+  }
+
+  .how-working__four {
+    &::before {
+      top: 0;
+    }
   }
 }

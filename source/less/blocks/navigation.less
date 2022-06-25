@@ -90,7 +90,6 @@
     .list-none();
     display: flex;
     flex-wrap: wrap;
-    row-gap: 15px;
     justify-content: end;
   }
 
@@ -111,7 +110,6 @@
 
 @media (min-width: @desktop-width) {
   .navigation__link {
-    color: @white;
 
     &:hover {
       opacity: 0.6;
@@ -122,8 +120,8 @@
     }
   }
 
-  .navigation__link--black {
-    color: @black;
+  .navigation__link--white {
+    color: @white;
 
     &:hover {
       opacity: 0.6;
@@ -132,5 +130,9 @@
     &:active {
       border-bottom: 2px solid @green;
     }
+  }
+
+  .navigation__list-menu {
+    font-size: 20px;
   }
 }
