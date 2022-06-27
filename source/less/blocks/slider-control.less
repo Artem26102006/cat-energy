@@ -1,4 +1,4 @@
-.example__slider-before-after {
+.slider-control {
   display: grid;
   grid-template-columns: auto 86px auto;
   padding-top: 15px;
@@ -16,7 +16,7 @@
   }
 }
 
-.example__slider-button {
+.slider-control__button {
   text-align: center;
   font-size: 16px;
   line-height: 20px;
@@ -28,28 +28,28 @@
   }
 }
 
-input[type="range"] {
+.slider-control__line[type="range"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background: none;
 }
 
-input[type="range"]::-webkit-slider-runnable-track {
+.slider-control__line[type="range"]::-webkit-slider-runnable-track {
   border-radius: 6px;
   height: 14px;
   background-color: @gray-almost-dark;
   position: relative;
 }
 
-input[type="range"]::-moz-range-track {
+.slider-control__line[type="range"]::-moz-range-track {
   border-radius: 6px;
   height: 14px;
   background-color: @gray-almost-dark;
   position: relative;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+.slider-control__line[type="range"]::-webkit-slider-thumb {
   background: @green;
   position: absolute;
   border-radius: 6px;
@@ -61,7 +61,7 @@ input[type="range"]::-webkit-slider-thumb {
   margin-left: 6px;
 }
 
-input[type="range"]::-moz-range-thumb {
+.slider-control__line[type="range"]::-moz-range-thumb {
   background: @green;
   position: absolute;
   border-radius: 6px;
@@ -73,19 +73,19 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (min-width: @tablet-width) {
-  input[type="range"]::-webkit-slider-runnable-track {
+  .slider-control__line[type="range"]::-webkit-slider-runnable-track {
     border-radius: 6px;
     height: 6px;
     background-color: @gray-almost-dark;
   }
 
-  input[type="range"]::-moz-range-track {
+  .slider-control__line[type="range"]::-moz-range-track {
     border-radius: 6px;
     height: 6px;
     background-color: @gray-almost-dark;
   }
 
-  input[type="range"]::-webkit-slider-thumb {
+  .slider-control__line[type="range"]::-webkit-slider-thumb {
     background: @white;
     position: relative;
     border-radius: 50%;
@@ -96,7 +96,7 @@ input[type="range"]::-moz-range-thumb {
     margin-top: -14px;
   }
 
-  input[type="range"]::-moz-range-thumb {
+  .slider-control__line[type="range"]::-moz-range-thumb {
     background: @white;
     border-radius: 50%;
     cursor: pointer;
