@@ -13,7 +13,7 @@
 
 <body class="page-body">
   <header class="main-header">
-    <div class="container container__header">
+    <div class="container main-header__container">
       <a href="index.html" class="main-header__link main-header__link--bottom">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg" />
@@ -28,7 +28,7 @@
         <button class="navigation__button-menu" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="navigation__list-menu--open">
+        <ul class="navigation__list-menu-open">
           <li class="navigation__item">
             <a href="index.html" class="navigation__link navigation__link--black">Главная</a>
           </li>
@@ -36,7 +36,7 @@
             <a href="catalog.html" class="navigation__link navigation__link--black">Каталог продукции</a>
           </li>
           <li class="navigation__item">
-            <a href="form.html" class="link navigation__link navigation__link--black">Подбор программы</a>
+            <a href="form.html" class="navigation__link navigation__link--black">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -82,8 +82,8 @@
                 <span class="form__choose-way-control-mark"></span>
                 <span class="form__choose-way-field-label">Набор массы</span>
               </label>
-              <label class="choose-way__field choose-way__control">
-                <input class="form__choose-way-field-control" type="radio" name="button" value="dont-know" />
+              <label class="form__choose-way-field form__choose-way-control">
+                <input class="form__choose-way-field-control" type="radio" name="button" value="weight-gain" />
                 <span class="form__choose-way-control-mark"></span>
                 <span class="form__choose-way-field-label">Не знаю (Нужен ваш совет)</span>
               </label>
@@ -93,7 +93,7 @@
         <div class="form__about-owner">
           <div class="line">
             <div class="container-form">
-              <h2 class="line__title title__contacts">
+              <h2 class="line__title line__title-contacts">
                 Контактные данные (владельца кота)
               </h2>
             </div>
@@ -128,7 +128,7 @@
             </div>
           </div>
           <div class="container-form">
-            <textarea class="comment__text" name="comment" id="comment"
+            <textarea class="form__comment-text" name="comment" id="comment"
               placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </div>
@@ -167,10 +167,10 @@
         </div>
         <div class="container-form">
           <div class="form__block-button">
-            <button type="submit" class="button form-cat-energy__button">
+            <button type="submit" class="button form__button">
               <span class="button__text">Заказать</span>
             </button>
-            <span class="form-cat-energy__required">
+            <span class="form__required">
               * — Обязательные поля
             </span>
           </div>
@@ -178,31 +178,28 @@
       </form>
     </section>
     <section class="map">
-      <div class="map__wrapper map__wrapper--gray">
+      <div class="map__wrapper">
         <div class="map__invite-address">
           <h4 class="map__title-invite">
             Приглашаем к сотрудничеству дилеров!
           </h4>
           <address class="map__address">
-            ул. Большая
-            Конюшенная, д. 19/8
-            Санкт-Петербург
+            ул. Большая Конюшенная, д. 19/8 <span class="map__address-city">Санкт-Петербург</span>
           </address>
         </div>
       </div>
       <div class="map__block">
-        <div class="map__image-map">
+        <div class="map__image-block">
           <picture>
             <source type="image/webp" media="(min-width: 1440px)"
-              srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+              srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" />
             <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+              srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" />
+            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" />
 
-            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
-            <img class="map-cat-energy__image-map" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x"
-              alt="Карта Cat Energy">
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x" />
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x" />
+            <img class="map__image" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" alt="Карта Cat Energy" />
           </picture>
         </div>
 
@@ -214,7 +211,7 @@
     </section>
   </main>
   <footer class="main-footer">
-    <div class="container__footer">
+    <div class="main-footer__container">
       <a href="#" class="main-footer__link-text">
         <img src="img/icons/logo-text-mobile.svg" width="128" height="24" alt="Cat Energy">
       </a>

@@ -1,7 +1,7 @@
-let map = document.querySelector(".map__image-map");
+let map = document.querySelector(".map__image-block");
 let iframe = document.querySelector("iframe");
 let button = document.querySelector(".navigation__button-menu");
-let menu = document.querySelector(".navigation__list-menu--open");
+let menu = document.querySelector(".navigation__list-menu-open");
 let link = document.querySelector(".main-header__link")
 
 link.classList.remove("main-header__link--bottom")
