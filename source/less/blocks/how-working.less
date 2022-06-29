@@ -17,19 +17,28 @@
   list-style: none;
 
   @media (min-width: @tablet-width) {
+    display: block;
+    position: relative;
+
     &::after {
       counter-increment: myCounter;
-      content:counter(myCounter);
+      content: counter(myCounter);
       position: absolute;
       color: @gray-very-light;
       font-size: 280px;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 127px;
+      top: 117px;
+      left: 117px;
       z-index: -1;
       display: inline-block;
       text-align: center;
       line-height: 40px;
+    }
+
+    @media (min-width: @desktop-width) {
+      &::after {
+        top: 75px;
+        left: 127px;
+      }
     }
   }
 }
@@ -138,11 +147,6 @@
     font-size: 60px;
     line-height: 60px;
     width: 405px;
-  }
-
-  .how-working__item {
-    display: block;
-    position: relative;
   }
 
   .how-working__one {
