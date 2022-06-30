@@ -1,138 +1,225 @@
 .how-working {
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 49px;
 }
-
-// .container {
-//   width: 280px;
-//   margin: 0 auto;
-// }
-
-// вопрос как цифры вставить?
 
 .how-working__title {
   width: 245px;
   line-height: 46px;
   font-size: 36px;
   margin: 0;
-  margin-bottom: 40px
+  margin-bottom: 40px;
+}
+
+.how-working__item {
+  position: relative;
+  width: 275px;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: relative;
+
+    &::after {
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      position: absolute;
+      color: @gray-very-light;
+      font-size: 280px;
+      top: 117px;
+      left: 117px;
+      z-index: -1;
+      display: inline-block;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    @media (min-width: @desktop-width) {
+      &::after {
+        top: 75px;
+        left: 127px;
+      }
+    }
+  }
+}
+
+.how-working__one {
+  &::before {
+    content: url("../img/icons/icon-leaf.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: @green;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.how-working__two {
+  &::before {
+    content: url("../img/icons/icon-tub.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: @green;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.how-working__three {
+  &::before {
+    content: url("../img/icons/icon-eat.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: @green;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.how-working__four {
+  &::before {
+    content: url("../img/icons/icon-time.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: @green;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.how-working__paragraph {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 195px;
+  font-size: 14px;
+  margin: 0;
+  line-height: 18px;
+  margin-left: auto;
 }
 
 .how-working__list {
   .list-none();
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
-}
+  row-gap: 25px;
 
-.how-working__item {
-  display: flex;
-  width: 275px;
-}
+  @media (min-width: @tablet-width) {
+    counter-reset: myCounter;
+    display: grid;
+    margin: 0;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+    column-gap: 55px;
+  }
 
-.how-working__block {
-  width: 60px;
-  height: 60px;
-  background-color: @green;
-  position: relative;
-}
-
-.how-working__leaf::before {
-  content: url("../../img/icons/icon-leaf.svg");
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.how-working__tub::before {
-  content: url("../../img/icons/icon-tub.svg");
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.how-working__eat::before {
-  content: url("../../img/icons/icon-eat.svg");
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.how-working__time::before {
-  content: url("../../img/icons/icon-time.svg");
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.how-working__paragraph {
-  font-family: Arial, Helvetica, sans-serif;
-  width: 195px;
-  margin-left: auto;
-  line-height: 18px;
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 50px;
+    row-gap: 0;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .how-working {
-    padding-top: 45px;
+    padding-top: 49px;
     padding-bottom: 47px;
-  }
-
-  .container {
-    width: 708px;
-    margin: 0 auto;
   }
 
   .how-working__title {
     font-size: 60px;
     line-height: 60px;
     width: 405px;
+    margin-bottom: 30px;
   }
 
-  .how-working__list {
-    display: grid;
-    margin: 0;
-    grid-template-columns: 235px 248px;
-    row-gap: 30px;
-    column-gap: 175px;
+  .how-working__one {
+    &::before {
+      content: url("../img/icons/icon-leaf.svg");
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: @green;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
-  .how-working__item {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    row-gap: 31px;
+  .how-working__two {
+    &::before {
+      content: url("../img/icons/icon-tub.svg");
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: @green;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
+  .how-working__three {
+    &::before {
+      content: url("../img/icons/icon-eat.svg");
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: @green;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 
-  .how-working__block {
-    width: 80px;
-    height: 80px;
-    margin-top: 40px;
+  .how-working__four {
+    &::before {
+      content: url("../img/icons/icon-time.svg");
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: @green;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .how-working__paragraph {
     font-size: 16px;
-    width: 230px;
-    margin-left: 0;
+    width: 245px;
     line-height: 24px;
-    margin-bottom: 57px;
+    margin: 149px 29px 57px 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .how-working {
-    padding-top: 71px;
+    padding-top: 70px;
     padding-bottom: 69px;
-  }
-
-  .container {
-    width: 1220px;
-    margin: 0 auto;
   }
 
   .how-working__title {
@@ -144,14 +231,32 @@
 
   .how-working__paragraph {
     width: 245px;
+    margin-top: 110px;
   }
 
-  .how-working__list {
-    display: grid;
-    grid-template-columns: 230px 246px 248px 250px;
-    column-gap: 0;
-    row-gap: 0;
-    width: 100%;
-    justify-content: space-between;
+  .how-working__one {
+    &::before {
+      top: 0;
+    }
+  }
+
+  .how-working__two {
+    &::before {
+      top: 0;
+      left: 5px;
+    }
+  }
+
+  .how-working__three {
+    &::before {
+      top: 0;
+      left: 5px;
+    }
+  }
+
+  .how-working__four {
+    &::before {
+      top: 0;
+    }
   }
 }
