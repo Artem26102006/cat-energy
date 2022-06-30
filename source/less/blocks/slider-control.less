@@ -1,6 +1,8 @@
 .slider-control {
   display: grid;
-  grid-template-columns: auto 86px auto;
+  grid-template-columns: 50px 86px 50px;
+  justify-content: center;
+  column-gap: 10px;
   padding-top: 15px;
 
   @media (min-width: @tablet-width) {
@@ -29,7 +31,7 @@
 
     &::after {
       content: "";
-      width: 45px;
+      width: 100%;
       border-top: 2px dotted @gray-dark;
       position: absolute;
       bottom: -4px;
