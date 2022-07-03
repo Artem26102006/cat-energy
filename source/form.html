@@ -14,7 +14,7 @@
 <body class="page-body">
   <header class="main-header">
     <div class="container main-header__container">
-      <a href="index.html" class="main-header__link main-header__link--bottom">
+      <a href="#" class="main-header__link main-header__link--bottom">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg" />
           <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg" />
@@ -30,18 +30,19 @@
         </button>
         <ul class="navigation__list-menu-open">
           <li class="navigation__item">
-            <a href="index.html" class="navigation__link navigation__link--black">Главная</a>
+            <a href="index.html" class="navigation__link navigation__link--green">Главная</a>
           </li>
           <li class="navigation__item">
-            <a href="catalog.html" class="navigation__link navigation__link--black">Каталог продукции</a>
+            <a href="catalog.html" class="navigation__link navigation__link--green">Каталог продукции</a>
           </li>
           <li class="navigation__item">
-            <a href="form.html" class="navigation__link navigation__link--black">Подбор программы</a>
+            <a href="form.html" class="navigation__link navigation__link--active  navigation__link--green">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
+
 
   <main class="main-container">
     <section class="program-selection">
@@ -59,15 +60,15 @@
             <div class="form__about-cat">
               <label class="form__about-cat-field">
                 <span class="form__about-cat-field-label form__about-cat-field-label-name">Имя:*</span>
-                <input class="form__about-cat-field-control" type="text" name="name" placeholder="Барсик" required="" />
+                <input class="input form__about-cat-field-control" type="text" name="name" placeholder="Барсик" required="" />
               </label>
               <label class="form__about-cat-field">
                 <span class="form__about-cat-field-label form__about-cat-field-label-weight">Вес(кг):*</span>
-                <input class="form__about-cat-field-control" type="text" name="weight" placeholder="7" required="" />
+                <input class="input form__about-cat-field-control" type="text" name="weight" placeholder="7" required="" />
               </label>
               <label class="form__about-cat-field">
                 <span class="form__about-cat-field-label form__about-cat-field-label-age">Возраст(лет):</span>
-                <input class="form__about-cat-field-control" type="text" name="age" placeholder="7" />
+                <input class="input form__about-cat-field-control" type="text" name="age" placeholder="7" />
               </label>
             </div>
 
@@ -102,7 +103,7 @@
             <div class="form__about-owner-block">
               <label class="form__about-owner-field">
                 <span class="form__about-owner-field-label form__about-owner-field-label-email">E-mail:*</span>
-                <input class="form__about-owner-field-control form__about-owner-field-control-email" type="email"
+                <input class="input form__about-owner-field-control form__about-owner-field-control-email" type="email"
                   name="email" placeholder="Ваш e-mail" required="" />
                 <svg width="20" height="16" class="form__icon-email">
                   <use href="img/sprite.svg#email-icon"></use>
@@ -110,7 +111,7 @@
               </label>
               <label class="form__about-owner-field">
                 <span class="form__about-owner-field-label form__about-owner-field-label-phone">Телефон:*</span>
-                <input class="form__about-owner-field-control form__about-owner-field-control-phone" type="tel"
+                <input class="input form__about-owner-field-control form__about-owner-field-control-phone" type="tel"
                   name="phone" placeholder="Ваш номер" required="" />
                 <svg width="20" height="20" class="form__icon-phone">
                   <use href="img/sprite.svg#phone-icon"></use>

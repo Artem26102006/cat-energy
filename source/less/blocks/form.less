@@ -65,20 +65,11 @@
 
 .form__about-cat-field-control {
   width: 100%;
-  text-transform: uppercase;
   height: 45px;
-  box-sizing: border-box;
-  border: 2px solid @gray;
   margin-left: auto;
-  font-size: 16px;
-  line-height: 18px;
-  padding-left: 15px;
 
   @media (min-width: @tablet-width) {
-    font-size: 20px;
     height: 52px;
-    line-height: 30px;
-    padding-left: 20px;
   }
 }
 
@@ -126,6 +117,16 @@
   }
 }
 
+.form__choose-way-field {
+  &:hover .form__choose-way-control-mark {
+    border: 1px solid @gray-input-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .form__choose-way-field-label {
   margin-top: 7px;
   margin-left: 50px;
@@ -152,6 +153,7 @@
 
 .form__choose-way-field-control[type="radio"]:checked
 + .form__choose-way-control-mark::before {
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -160,7 +162,6 @@
   height: 14px;
   background-color: @green;
   border-radius: 50%;
-  content: "";
 }
 
 @media (min-width: @desktop-width) {
@@ -276,20 +277,10 @@
 
 .form__about-owner-field-control {
   width: 100%;
-  font-family: Oswald, Arial, sans-serif;
   height: 45px;
-  box-sizing: border-box;
-  border: 2px solid @gray;
   margin-left: auto;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  padding-left: 15px;
 
   @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
-    padding-left: 20px;
     height: 52px;
   }
 }
@@ -396,7 +387,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  flex-grow: 1;
 }
 
 .form__additional-field-control {
@@ -410,11 +400,21 @@
   width: 26px;
   height: 26px;
   background-color: @white;
-  border: 2px solid @gray;
+  border: 1px solid @gray;
 
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
+  }
+}
+
+.form__additional-field {
+  &:hover .form__additional-control-mark {
+    border: 1px solid @gray-input-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
