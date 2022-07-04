@@ -225,6 +225,11 @@
   position: absolute;
   right: 15px;
   fill: none;
+  stroke: @black-very;
+
+  &--error {
+    stroke: @error;
+  }
 
   @media (min-width: @tablet-width) {
     right: 20px;
@@ -234,6 +239,10 @@
 .form__icon-phone {
   position: absolute;
   right: 12px;
+
+  &--error {
+    fill: @error;
+  }
 
   @media (min-width: @tablet-width) {
     right: 16px;
@@ -273,6 +282,14 @@
   align-items: center;
   position: relative;
   flex-grow: 1;
+
+  &:focus-within .form__icon-email {
+    stroke: @green;
+  }
+
+  &:focus-within .form__icon-phone {
+    fill: @green;
+  }
 }
 
 .form__about-owner-field-control {
@@ -324,7 +341,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top:70px;
+    margin-top: 70px;
   }
 }
 
