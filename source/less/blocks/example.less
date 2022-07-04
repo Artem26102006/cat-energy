@@ -41,7 +41,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
-    padding-bottom: 265px;
+    padding-bottom: 255px;
     justify-content: space-between;
   }
 
@@ -54,9 +54,9 @@
 .example__info {
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(2, 124px);
-  justify-content: space-between;
-  margin-bottom: 21px;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+  margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
     width: 366px;
@@ -86,45 +86,53 @@
 }
 
 .example__descrip {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0 auto;
-  margin-bottom: -10px;
-  line-height: 14px;
+  width: 80px;
+  margin-bottom: -15px;
+  font-size: 12px;
+  line-height: 12px;
   background-color: @gray-light;
-}
+  color: @black-light;
 
-.example__descrip-weight {
-  width: 87px;
-}
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: @white;
+    margin: 0 auto -5px;
+  }
 
-.example__descrip-time {
-  width: 87px;
+  @media (min-width: @desktop-width) {
+    background-color: @gray-light;
+  }
 }
 
 .example__total-title {
   display: flex;
+  justify-content: center;
   width: 210px;
   margin: 0 auto;
-  justify-content: space-between;
+  font-size: 14px;
+  line-height: 20px;
   margin-bottom: 40px;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     text-align: end;
     width: 245px;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 26px;
     margin: 0;
     display: flex;
     flex-direction: column;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 20px;
     display: flex;
     text-align: start;
     width: 325px;
-    margin: 0;
     flex-direction: row;
-    text-transform: uppercase;
+    justify-content: space-between;
   }
 }
 
@@ -181,10 +189,6 @@
     padding-bottom: 11px;
   }
 
-  .example__descrip {
-    background-color: @white;
-  }
-
   .example__descrip-weight {
     width: 114px;
   }
@@ -212,7 +216,7 @@
   }
 
   .example__grad {
-    background-color: @gray-very-light;
+    background-color: @gray-light;
   }
 }
 
@@ -250,12 +254,6 @@
     width: 436px;
     margin-bottom: 70px;
     font-size: 16px;
-  }
-
-  .example__descrip {
-    background-color: @gray-light;
-    margin: 0 auto;
-    margin-bottom: -5px;
   }
 
   .example__bg {

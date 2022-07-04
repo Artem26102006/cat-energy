@@ -1,6 +1,8 @@
 .slider-control {
   display: grid;
-  grid-template-columns: auto 86px auto;
+  grid-template-columns: 50px 86px 50px;
+  justify-content: center;
+  column-gap: 10px;
   padding-top: 15px;
 
   @media (min-width: @tablet-width) {
@@ -22,6 +24,12 @@
   line-height: 20px;
   text-transform: uppercase;
   position: relative;
+  background: none;
+  color: @black;
+
+  &:hover {
+    background: none;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -29,12 +37,26 @@
 
     &::after {
       content: "";
-      width: 45px;
+      width: 100%;
       border-top: 2px dotted @gray-dark;
       position: absolute;
       bottom: -4px;
       left: 50%;
       transform: translateX(-50%);
+    }
+
+    &:hover::after {
+      content: "";
+      width: 100%;
+      border-top: 2px solid @gray-dark;
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:active::after {
+      display: none;
     }
   }
 }
@@ -107,6 +129,15 @@
     -webkit-appearance: none;
     margin-top: -14px;
     box-shadow: inset 0px 0px 0px 12.5px @white;
+    border: 1px solid @gray-dark;
+
+    &:hover {
+      border: 1px solid gray-light;
+    }
+
+    &:active {
+      border: 1px solid @green;
+    }
   }
 
   .slider-control__line[type="range"]::-moz-range-thumb {
