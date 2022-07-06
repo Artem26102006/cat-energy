@@ -6,6 +6,7 @@ let link = document.querySelector(".main-header__link");
 let cat_before = document.querySelector(".example__slider-picture-before");let cat_after = document.querySelector(".example__slider-picture-after");
 let button_before = document.querySelector(".slider-control__button--before");
 let button_after = document.querySelector(".slider-control__button--after");
+let input = document.querySelector(".slider-control__line");
 
 
 link.classList.remove("main-header__link--bottom")
@@ -35,6 +36,14 @@ function show_before() {
   cat_after.style.display = "none";
 }
 
+input.addEventListener("click", show_before_after);
+
+function show_before_after() {
+  cat_before.style.display = "block";
+  cat_before.style.width = "50%";
+  cat_after.style.display = "block";
+  cat_after.style.width = "50%";
+}
 
 map.style.display = "none";
 iframe.style.display = "block";
