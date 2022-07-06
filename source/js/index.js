@@ -8,6 +8,8 @@ let button_before = document.querySelector(".slider-control__button--before");
 let button_after = document.querySelector(".slider-control__button--after");
 let input = document.querySelector(".slider-control__line");
 
+map.style.display = "none";
+iframe.style.display = "block";
 
 link.classList.remove("main-header__link--bottom")
 button.classList.add("navigation__button")
@@ -44,6 +46,3 @@ function show_before_after() {
   cat_after.style.display = "block";
   cat_after.style.width = "50%";
 }
-
-map.style.display = "none";
-iframe.style.display = "block";
