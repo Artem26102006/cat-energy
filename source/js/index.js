@@ -24,12 +24,14 @@ button_after.addEventListener("click", show_after);
 function show_after() {
   cat_before.style.display = "none";
   cat_after.style.display = "block";
+  cat_after.style.width = "100%";
 }
 
 button_before.addEventListener("click", show_before);
 
 function show_before() {
   cat_before.style.display = "block";
+  cat_before.style.width = "100%";
   cat_after.style.display = "none";
 }
 
